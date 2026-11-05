@@ -1,0 +1,10 @@
+step,change,public_lb
+v1,smoother T1 + T2 v3,0.79509
+v2,+T2 v3,0.79775
+v4,+T1 LightGBM,0.82448
+v5,+T2 long-history,0.82902
+v6,+blend weights,0.82984
+v7,+empty-window fallback,0.83652
+v8,+weights+fallback,0.83734
+v9,+U-Net state blend,0.83996
+v10,+2-seed U-Net w=0.5,0.84052

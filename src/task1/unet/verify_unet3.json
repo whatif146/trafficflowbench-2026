@@ -1,0 +1,106 @@
+{
+  "validation": {
+    "file": "state_gbm_unet3_w05_validation.csv",
+    "split": "validation",
+    "rows": 3451376,
+    "columns_ok": true,
+    "row_count_matches_shipped_gbm": true,
+    "keys_match_shipped_gbm": true,
+    "no_nan": true,
+    "panels": {
+      "D7_I10_E": {
+        "rows": 337512,
+        "template_exact": true
+      },
+      "D7_I10_W": {
+        "rows": 233060,
+        "template_exact": true
+      },
+      "D7_I210_E": {
+        "rows": 625014,
+        "template_exact": true
+      },
+      "D7_I210_W": {
+        "rows": 205973,
+        "template_exact": true
+      },
+      "D7_I405_N": {
+        "rows": 673133,
+        "template_exact": true
+      },
+      "D7_I405_S": {
+        "rows": 271939,
+        "template_exact": true
+      },
+      "D12_I5_N": {
+        "rows": 588468,
+        "template_exact": true
+      },
+      "D12_I5_S": {
+        "rows": 219222,
+        "template_exact": true
+      },
+      "D12_I405_N": {
+        "rows": 203337,
+        "template_exact": true
+      },
+      "D12_I405_S": {
+        "rows": 93718,
+        "template_exact": true
+      }
+    },
+    "all_panels_template_exact": true
+  },
+  "private": {
+    "file": "state_gbm_unet3_w05_private.csv",
+    "split": "private",
+    "rows": 3284419,
+    "columns_ok": true,
+    "row_count_matches_shipped_gbm": true,
+    "keys_match_shipped_gbm": true,
+    "no_nan": true,
+    "panels": {
+      "D7_I10_E": {
+        "rows": 303294,
+        "template_exact": true
+      },
+      "D7_I10_W": {
+        "rows": 203699,
+        "template_exact": true
+      },
+      "D7_I210_E": {
+        "rows": 581196,
+        "template_exact": true
+      },
+      "D7_I210_W": {
+        "rows": 158901,
+        "template_exact": true
+      },
+      "D7_I405_N": {
+        "rows": 746097,
+        "template_exact": true
+      },
+      "D7_I405_S": {
+        "rows": 243603,
+        "template_exact": true
+      },
+      "D12_I5_N": {
+        "rows": 543092,
+        "template_exact": true
+      },
+      "D12_I5_S": {
+        "rows": 204957,
+        "template_exact": true
+      },
+      "D12_I405_N": {
+        "rows": 192164,
+        "template_exact": true
+      },
+      "D12_I405_S": {
+        "rows": 107416,
+        "template_exact": true
+      }
+    },
+    "all_panels_template_exact": true
+  }
+}

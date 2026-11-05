@@ -1,0 +1,82 @@
+{
+  "ref": "state_gbm_unet_w05_private.csv",
+  "new": "state_gbm_unet3_w05_private.csv",
+  "per_panel": {
+    "D7_I10_E": {
+      "rows": 303294,
+      "mean_abs_dv_kmh": 0.058750743503003695,
+      "mean_abs_dq_vph": 3.5656327523788782,
+      "frac_dq_gt1pct": 0.0016287826333524567,
+      "frac_dq_gt5pct": 6.594261673491727e-06
+    },
+    "D7_I10_W": {
+      "rows": 203699,
+      "mean_abs_dv_kmh": 0.08351495098159538,
+      "mean_abs_dq_vph": 2.813616610783557,
+      "frac_dq_gt1pct": 0.0011094801643601589,
+      "frac_dq_gt5pct": 0.0
+    },
+    "D7_I210_E": {
+      "rows": 581196,
+      "mean_abs_dv_kmh": 0.09209753164164926,
+      "mean_abs_dq_vph": 3.4304914865208977,
+      "frac_dq_gt1pct": 0.010757128404187228,
+      "frac_dq_gt5pct": 8.602949779420368e-06
+    },
+    "D7_I210_W": {
+      "rows": 158901,
+      "mean_abs_dv_kmh": 0.07686314120112522,
+      "mean_abs_dq_vph": 3.4931396907508456,
+      "frac_dq_gt1pct": 0.0035934323887200207,
+      "frac_dq_gt5pct": 0.0
+    },
+    "D7_I405_N": {
+      "rows": 746097,
+      "mean_abs_dv_kmh": 0.06659823186529366,
+      "mean_abs_dq_vph": 5.7209857297375555,
+      "frac_dq_gt1pct": 0.012330836338974692,
+      "frac_dq_gt5pct": 5.361233190858561e-06
+    },
+    "D7_I405_S": {
+      "rows": 243603,
+      "mean_abs_dv_kmh": 0.08126440971580813,
+      "mean_abs_dq_vph": 4.434841771242554,
+      "frac_dq_gt1pct": 0.005176455133967972,
+      "frac_dq_gt5pct": 4.105039757310049e-06
+    },
+    "D12_I5_N": {
+      "rows": 543092,
+      "mean_abs_dv_kmh": 0.06071047078579688,
+      "mean_abs_dq_vph": 4.091890637313751,
+      "frac_dq_gt1pct": 0.007521745855214218,
+      "frac_dq_gt5pct": 0.0
+    },
+    "D12_I5_S": {
+      "rows": 204957,
+      "mean_abs_dv_kmh": 0.06617772508379806,
+      "mean_abs_dq_vph": 5.052138107017571,
+      "frac_dq_gt1pct": 0.005142542094195368,
+      "frac_dq_gt5pct": 1.4637216586893837e-05
+    },
+    "D12_I405_N": {
+      "rows": 192164,
+      "mean_abs_dv_kmh": 0.07222610894860639,
+      "mean_abs_dq_vph": 3.488750442330509,
+      "frac_dq_gt1pct": 0.008071230823671447,
+      "frac_dq_gt5pct": 1.5611665036114984e-05
+    },
+    "D12_I405_S": {
+      "rows": 107416,
+      "mean_abs_dv_kmh": 0.05828660534743425,
+      "mean_abs_dq_vph": 6.479429042228347,
+      "frac_dq_gt1pct": 0.018265435316898785,
+      "frac_dq_gt5pct": 0.0
+    }
+  },
+  "mean": {
+    "mean_abs_dv_kmh": 0.07164899190741109,
+    "mean_abs_dq_vph": 4.257091627030446,
+    "frac_dq_gt1pct": 0.007359706915354235,
+    "frac_dq_gt5pct": 5.491236602408953e-06
+  }
+}

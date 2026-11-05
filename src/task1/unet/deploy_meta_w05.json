@@ -1,0 +1,286 @@
+{
+  "w_gbm": 0.5,
+  "seeds_requested": [
+    43,
+    44
+  ],
+  "seeds_used": {
+    "validation": {
+      "D7_I10_E": [
+        43,
+        44
+      ],
+      "D7_I10_W": [
+        43,
+        44
+      ],
+      "D7_I210_E": [
+        43,
+        44
+      ],
+      "D7_I210_W": [
+        43,
+        44
+      ],
+      "D7_I405_N": [
+        43,
+        44
+      ],
+      "D7_I405_S": [
+        43,
+        44
+      ],
+      "D12_I5_N": [
+        43,
+        44
+      ],
+      "D12_I5_S": [
+        43,
+        44
+      ],
+      "D12_I405_N": [
+        43,
+        44
+      ],
+      "D12_I405_S": [
+        43,
+        44
+      ]
+    },
+    "private": {
+      "D7_I10_E": [
+        43,
+        44
+      ],
+      "D7_I10_W": [
+        43,
+        44
+      ],
+      "D7_I210_E": [
+        43,
+        44
+      ],
+      "D7_I210_W": [
+        43,
+        44
+      ],
+      "D7_I405_N": [
+        43,
+        44
+      ],
+      "D7_I405_S": [
+        43,
+        44
+      ],
+      "D12_I5_N": [
+        43,
+        44
+      ],
+      "D12_I5_S": [
+        43,
+        44
+      ],
+      "D12_I405_N": [
+        43,
+        44
+      ],
+      "D12_I405_S": [
+        43,
+        44
+      ]
+    }
+  },
+  "epochs": 60,
+  "architecture": "compact 2D U-Net, 3 pools (4 levels), widths [24,48,96,128], GroupNorm, SiLU, 1x1 head, 16 input channels, 2 output channels (speed/flow residual in score units)",
+  "loss": "0.54*r_s^2 + 0.46*r_q^2 on the published template rows (this IS 1 - S_state per cell)",
+  "fit": "all 273 train days (refit); holdout evidence from the separate protocol that fits on days<213 only",
+  "splits": [
+    "validation",
+    "private"
+  ],
+  "footprint": {
+    "validation": {
+      "per_panel": {
+        "D7_I10_E": {
+          "mean_abs_dv_kmh": 0.3739143191394432,
+          "mean_abs_dq_per_lane": 5.261808353560403,
+          "p99_abs_dv_kmh": 1.8032116513333085,
+          "frac_dq_gt1pct": 0.1942775367986916,
+          "frac_dq_gt5pct": 0.0010844058877906564,
+          "rows": 337512
+        },
+        "D7_I10_W": {
+          "mean_abs_dv_kmh": 0.29901795999429953,
+          "mean_abs_dq_per_lane": 4.606703817803456,
+          "p99_abs_dv_kmh": 1.07593817413042,
+          "frac_dq_gt1pct": 0.15883034411739466,
+          "frac_dq_gt5pct": 0.0013472925426928689,
+          "rows": 233060
+        },
+        "D7_I210_E": {
+          "mean_abs_dv_kmh": 0.42176848938767003,
+          "mean_abs_dq_per_lane": 5.260625940371602,
+          "p99_abs_dv_kmh": 1.7369918465935896,
+          "frac_dq_gt1pct": 0.2293580623794027,
+          "frac_dq_gt5pct": 0.0013487697875567588,
+          "rows": 625014
+        },
+        "D7_I210_W": {
+          "mean_abs_dv_kmh": 0.3754472619328558,
+          "mean_abs_dq_per_lane": 5.387857139085645,
+          "p99_abs_dv_kmh": 2.1769806322626466,
+          "frac_dq_gt1pct": 0.2184703820403645,
+          "frac_dq_gt5pct": 0.001636136775208401,
+          "rows": 205973
+        },
+        "D7_I405_N": {
+          "mean_abs_dv_kmh": 0.454986474319567,
+          "mean_abs_dq_per_lane": 5.4464299808282535,
+          "p99_abs_dv_kmh": 2.145049757339479,
+          "frac_dq_gt1pct": 0.19470149286990832,
+          "frac_dq_gt5pct": 0.0024155701770675335,
+          "rows": 673133
+        },
+        "D7_I405_S": {
+          "mean_abs_dv_kmh": 0.4216917900044141,
+          "mean_abs_dq_per_lane": 6.226064865098186,
+          "p99_abs_dv_kmh": 3.5923396234846203,
+          "frac_dq_gt1pct": 0.22285144830274436,
+          "frac_dq_gt5pct": 0.0018901297717502823,
+          "rows": 271939
+        },
+        "D12_I5_N": {
+          "mean_abs_dv_kmh": 0.2534401003459471,
+          "mean_abs_dq_per_lane": 4.17582861531178,
+          "p99_abs_dv_kmh": 1.0661027396076508,
+          "frac_dq_gt1pct": 0.19645248339756793,
+          "frac_dq_gt5pct": 0.0019338349748839359,
+          "rows": 588468
+        },
+        "D12_I5_S": {
+          "mean_abs_dv_kmh": 0.2777370602477842,
+          "mean_abs_dq_per_lane": 5.088162959064466,
+          "p99_abs_dv_kmh": 2.5840433496745203,
+          "frac_dq_gt1pct": 0.19046902226966272,
+          "frac_dq_gt5pct": 0.00306538577332567,
+          "rows": 219222
+        },
+        "D12_I405_N": {
+          "mean_abs_dv_kmh": 0.24798559138477744,
+          "mean_abs_dq_per_lane": 4.708435442562988,
+          "p99_abs_dv_kmh": 1.1104336673593687,
+          "frac_dq_gt1pct": 0.23494494361577087,
+          "frac_dq_gt5pct": 0.004554016239051427,
+          "rows": 203337
+        },
+        "D12_I405_S": {
+          "mean_abs_dv_kmh": 0.32138771373188363,
+          "mean_abs_dq_per_lane": 6.109258093238786,
+          "p99_abs_dv_kmh": 1.1549993375482395,
+          "frac_dq_gt1pct": 0.2679527945538744,
+          "frac_dq_gt5pct": 0.006050065088883672,
+          "rows": 93718
+        }
+      },
+      "mean": {
+        "mean_abs_dv_kmh": 0.3447376760488642,
+        "mean_abs_dq_per_lane": 5.227117520692556,
+        "p99_abs_dv_kmh": 1.8446090779333848,
+        "frac_dq_gt1pct": 0.2108308510345382,
+        "frac_dq_gt5pct": 0.0025325607018211204
+      }
+    },
+    "private": {
+      "per_panel": {
+        "D7_I10_E": {
+          "mean_abs_dv_kmh": 0.36837450608431177,
+          "mean_abs_dq_per_lane": 5.3356587855796125,
+          "p99_abs_dv_kmh": 1.883682326993791,
+          "frac_dq_gt1pct": 0.18914650471159997,
+          "frac_dq_gt5pct": 0.000896819587594875,
+          "rows": 303294
+        },
+        "D7_I10_W": {
+          "mean_abs_dv_kmh": 0.3062339078051972,
+          "mean_abs_dq_per_lane": 4.65024912327284,
+          "p99_abs_dv_kmh": 1.1645046203038814,
+          "frac_dq_gt1pct": 0.15457120555329187,
+          "frac_dq_gt5pct": 0.001251847088105489,
+          "rows": 203699
+        },
+        "D7_I210_E": {
+          "mean_abs_dv_kmh": 0.43315932285883385,
+          "mean_abs_dq_per_lane": 4.716063601262623,
+          "p99_abs_dv_kmh": 1.788225768278753,
+          "frac_dq_gt1pct": 0.18519569990158224,
+          "frac_dq_gt5pct": 0.001219898278721808,
+          "rows": 581196
+        },
+        "D7_I210_W": {
+          "mean_abs_dv_kmh": 0.3576339123011289,
+          "mean_abs_dq_per_lane": 5.0179781493173286,
+          "p99_abs_dv_kmh": 2.0463724317956036,
+          "frac_dq_gt1pct": 0.19862052472923392,
+          "frac_dq_gt5pct": 0.0015858931032529688,
+          "rows": 158901
+        },
+        "D7_I405_N": {
+          "mean_abs_dv_kmh": 0.48485540062545596,
+          "mean_abs_dq_per_lane": 5.602024226052848,
+          "p99_abs_dv_kmh": 2.3707123261423417,
+          "frac_dq_gt1pct": 0.20850237971738259,
+          "frac_dq_gt5pct": 0.003181891898774556,
+          "rows": 746097
+        },
+        "D7_I405_S": {
+          "mean_abs_dv_kmh": 0.4469159401488378,
+          "mean_abs_dq_per_lane": 6.1041734769018205,
+          "p99_abs_dv_kmh": 4.014162562965448,
+          "frac_dq_gt1pct": 0.22413106570937139,
+          "frac_dq_gt5pct": 0.002081255156956195,
+          "rows": 243603
+        },
+        "D12_I5_N": {
+          "mean_abs_dv_kmh": 0.25423726672130664,
+          "mean_abs_dq_per_lane": 4.289747188633345,
+          "p99_abs_dv_kmh": 1.186687915449274,
+          "frac_dq_gt1pct": 0.19297651226679827,
+          "frac_dq_gt5pct": 0.001298122601695477,
+          "rows": 543092
+        },
+        "D12_I5_S": {
+          "mean_abs_dv_kmh": 0.3170093376858687,
+          "mean_abs_dq_per_lane": 5.26778358142319,
+          "p99_abs_dv_kmh": 3.5646372105937454,
+          "frac_dq_gt1pct": 0.19516288782525115,
+          "frac_dq_gt5pct": 0.0034251086813331575,
+          "rows": 204957
+        },
+        "D12_I405_N": {
+          "mean_abs_dv_kmh": 0.2239806977794713,
+          "mean_abs_dq_per_lane": 4.33455218874289,
+          "p99_abs_dv_kmh": 0.9674112796931112,
+          "frac_dq_gt1pct": 0.22209154680377177,
+          "frac_dq_gt5pct": 0.0033148768760017486,
+          "rows": 192164
+        },
+        "D12_I405_S": {
+          "mean_abs_dv_kmh": 0.380343420570303,
+          "mean_abs_dq_per_lane": 6.654949378560776,
+          "p99_abs_dv_kmh": 2.517156663174943,
+          "frac_dq_gt1pct": 0.2963152602964177,
+          "frac_dq_gt5pct": 0.0071777016459372905,
+          "rows": 107416
+        }
+      },
+      "mean": {
+        "mean_abs_dv_kmh": 0.3572743712580715,
+        "mean_abs_dq_per_lane": 5.197317969974726,
+        "p99_abs_dv_kmh": 2.1503553105390893,
+        "frac_dq_gt1pct": 0.20667135875147008,
+        "frac_dq_gt5pct": 0.0025433414918373566
+      }
+    }
+  },
+  "elapsed_sec": 18.5
+}

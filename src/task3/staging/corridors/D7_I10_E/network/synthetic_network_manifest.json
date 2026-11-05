@@ -1,0 +1,16 @@
+{
+  "schema_version": "synthetic_network_metadata_v1",
+  "panel": "D7_I10_E",
+  "uses_historical_traffic_rows": false,
+  "structural_inputs_only": [
+    "path_set.csv",
+    "path_link_incidence.csv",
+    "mainline connectivity"
+  ],
+  "replaced_with_synthetic": [
+    "FD capacity parameters",
+    "detector and ramp identifiers",
+    "ramp attachment map",
+    "OD weak prior"
+  ]
+}

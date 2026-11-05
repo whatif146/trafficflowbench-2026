@@ -1,0 +1,647 @@
+{
+  "w_gbm": 0.6,
+  "seeds_requested": [
+    43,
+    44
+  ],
+  "seeds_used": {
+    "validation": {
+      "D7_I10_E": [
+        43,
+        44
+      ],
+      "D7_I10_W": [
+        43,
+        44
+      ],
+      "D7_I210_E": [
+        43,
+        44
+      ],
+      "D7_I210_W": [
+        43,
+        44
+      ],
+      "D7_I405_N": [
+        43,
+        44
+      ],
+      "D7_I405_S": [
+        43,
+        44
+      ],
+      "D12_I5_N": [
+        43,
+        44
+      ],
+      "D12_I5_S": [
+        43,
+        44
+      ],
+      "D12_I405_N": [
+        43,
+        44
+      ],
+      "D12_I405_S": [
+        43,
+        44
+      ]
+    },
+    "private": {
+      "D7_I10_E": [
+        43,
+        44
+      ],
+      "D7_I10_W": [
+        43,
+        44
+      ],
+      "D7_I210_E": [
+        43,
+        44
+      ],
+      "D7_I210_W": [
+        43,
+        44
+      ],
+      "D7_I405_N": [
+        43,
+        44
+      ],
+      "D7_I405_S": [
+        43,
+        44
+      ],
+      "D12_I5_N": [
+        43,
+        44
+      ],
+      "D12_I5_S": [
+        43,
+        44
+      ],
+      "D12_I405_N": [
+        43,
+        44
+      ],
+      "D12_I405_S": [
+        43,
+        44
+      ]
+    }
+  },
+  "epochs": 60,
+  "architecture": "compact 2D U-Net, 3 pools (4 levels), widths [24,48,96,128], GroupNorm, SiLU, 1x1 head, 16 input channels, 2 output channels (speed/flow residual in score units)",
+  "loss": "0.54*r_s^2 + 0.46*r_q^2 on the published template rows (this IS 1 - S_state per cell)",
+  "fit": "all 273 train days (refit); holdout evidence from the separate protocol that fits on days<213 only",
+  "splits": [
+    "validation",
+    "private"
+  ],
+  "footprint": {
+    "validation": {
+      "per_panel": {
+        "D7_I10_E": {
+          "mean_abs_dv_kmh": 0.29913145531155444,
+          "mean_abs_dq_per_lane": 4.209446682848322,
+          "p99_abs_dv_kmh": 1.4425693210666477,
+          "frac_dq_gt1pct": 0.12571108582805945,
+          "frac_dq_gt5pct": 0.00042961435445258245,
+          "rows": 337512
+        },
+        "D7_I10_W": {
+          "mean_abs_dv_kmh": 0.23921436799543955,
+          "mean_abs_dq_per_lane": 3.685363054242764,
+          "p99_abs_dv_kmh": 0.8607505393043335,
+          "frac_dq_gt1pct": 0.10792070711404789,
+          "frac_dq_gt5pct": 0.0004633999828370377,
+          "rows": 233060
+        },
+        "D7_I210_E": {
+          "mean_abs_dv_kmh": 0.33741479151013615,
+          "mean_abs_dq_per_lane": 4.208500752297284,
+          "p99_abs_dv_kmh": 1.389593477274882,
+          "frac_dq_gt1pct": 0.14162722755010287,
+          "frac_dq_gt5pct": 0.0007647828688637375,
+          "rows": 625014
+        },
+        "D7_I210_W": {
+          "mean_abs_dv_kmh": 0.3003578095462847,
+          "mean_abs_dq_per_lane": 4.3102857112685165,
+          "p99_abs_dv_kmh": 1.7415845058101092,
+          "frac_dq_gt1pct": 0.13810547984444563,
+          "frac_dq_gt5pct": 0.0006457157006015352,
+          "rows": 205973
+        },
+        "D7_I405_N": {
+          "mean_abs_dv_kmh": 0.36398917945565373,
+          "mean_abs_dq_per_lane": 4.357143984662603,
+          "p99_abs_dv_kmh": 1.7160398058715851,
+          "frac_dq_gt1pct": 0.13657182161623335,
+          "frac_dq_gt5pct": 0.0011706453256637246,
+          "rows": 673133
+        },
+        "D7_I405_S": {
+          "mean_abs_dv_kmh": 0.3373534320035313,
+          "mean_abs_dq_per_lane": 4.98085189207855,
+          "p99_abs_dv_kmh": 2.8738716987877,
+          "frac_dq_gt1pct": 0.15203409588179703,
+          "frac_dq_gt5pct": 0.0007170725787768581,
+          "rows": 271939
+        },
+        "D12_I5_N": {
+          "mean_abs_dv_kmh": 0.2027520802767576,
+          "mean_abs_dq_per_lane": 3.3406628922494264,
+          "p99_abs_dv_kmh": 0.8528821916861227,
+          "frac_dq_gt1pct": 0.14181399838224,
+          "frac_dq_gt5pct": 0.0008717551336691205,
+          "rows": 588468
+        },
+        "D12_I5_S": {
+          "mean_abs_dv_kmh": 0.22218964819822737,
+          "mean_abs_dq_per_lane": 4.070530367251572,
+          "p99_abs_dv_kmh": 2.0672346797396197,
+          "frac_dq_gt1pct": 0.1330751475673062,
+          "frac_dq_gt5pct": 0.001354791033746613,
+          "rows": 219222
+        },
+        "D12_I405_N": {
+          "mean_abs_dv_kmh": 0.19838847310782196,
+          "mean_abs_dq_per_lane": 3.766748354050391,
+          "p99_abs_dv_kmh": 0.8883469338874953,
+          "frac_dq_gt1pct": 0.17213296153675917,
+          "frac_dq_gt5pct": 0.0017409522123371546,
+          "rows": 203337
+        },
+        "D12_I405_S": {
+          "mean_abs_dv_kmh": 0.257110170985507,
+          "mean_abs_dq_per_lane": 4.887406474591028,
+          "p99_abs_dv_kmh": 0.9239994700385968,
+          "frac_dq_gt1pct": 0.19141466954053651,
+          "frac_dq_gt5pct": 0.002016688362961224,
+          "rows": 93718
+        }
+      },
+      "mean": {
+        "mean_abs_dv_kmh": 0.27579014083909137,
+        "mean_abs_dq_per_lane": 4.1816940165540455,
+        "p99_abs_dv_kmh": 1.4756872623467092,
+        "frac_dq_gt1pct": 0.1440407194861528,
+        "frac_dq_gt5pct": 0.0010175417553909588
+      }
+    },
+    "private": {
+      "per_panel": {
+        "D7_I10_E": {
+          "mean_abs_dv_kmh": 0.2946996048674493,
+          "mean_abs_dq_per_lane": 4.268527028463692,
+          "p99_abs_dv_kmh": 1.5069458615950362,
+          "frac_dq_gt1pct": 0.12169050492261634,
+          "frac_dq_gt5pct": 0.00032311882200109464,
+          "rows": 303294
+        },
+        "D7_I10_W": {
+          "mean_abs_dv_kmh": 0.24498712624415767,
+          "mean_abs_dq_per_lane": 3.720199298618272,
+          "p99_abs_dv_kmh": 0.931603696243108,
+          "frac_dq_gt1pct": 0.10470841781255676,
+          "frac_dq_gt5pct": 0.00034364429869562443,
+          "rows": 203699
+        },
+        "D7_I210_E": {
+          "mean_abs_dv_kmh": 0.34652745828706705,
+          "mean_abs_dq_per_lane": 3.7728508810100974,
+          "p99_abs_dv_kmh": 1.4305806146229916,
+          "frac_dq_gt1pct": 0.10721512192100427,
+          "frac_dq_gt5pct": 0.0006521035932800639,
+          "rows": 581196
+        },
+        "D7_I210_W": {
+          "mean_abs_dv_kmh": 0.2861071298409031,
+          "mean_abs_dq_per_lane": 4.014382519453863,
+          "p99_abs_dv_kmh": 1.63709794543648,
+          "frac_dq_gt1pct": 0.12386957917193725,
+          "frac_dq_gt5pct": 0.0006670820196222805,
+          "rows": 158901
+        },
+        "D7_I405_N": {
+          "mean_abs_dv_kmh": 0.3878843205003646,
+          "mean_abs_dq_per_lane": 4.481619380842277,
+          "p99_abs_dv_kmh": 1.8965698609138766,
+          "frac_dq_gt1pct": 0.1497017143883436,
+          "frac_dq_gt5pct": 0.0015333126925855486,
+          "rows": 746097
+        },
+        "D7_I405_S": {
+          "mean_abs_dv_kmh": 0.35753275211907026,
+          "mean_abs_dq_per_lane": 4.883338781521457,
+          "p99_abs_dv_kmh": 3.211330050372361,
+          "frac_dq_gt1pct": 0.15075758508721157,
+          "frac_dq_gt5pct": 0.0007676424346169793,
+          "rows": 243603
+        },
+        "D12_I5_N": {
+          "mean_abs_dv_kmh": 0.20338981337704537,
+          "mean_abs_dq_per_lane": 3.431797750906675,
+          "p99_abs_dv_kmh": 0.9493503323594239,
+          "frac_dq_gt1pct": 0.1368644723177657,
+          "frac_dq_gt5pct": 0.00049347071950977,
+          "rows": 543092
+        },
+        "D12_I5_S": {
+          "mean_abs_dv_kmh": 0.2536074701486949,
+          "mean_abs_dq_per_lane": 4.214226865138554,
+          "p99_abs_dv_kmh": 2.851709768474994,
+          "frac_dq_gt1pct": 0.1366628121996321,
+          "frac_dq_gt5pct": 0.0016784008352971598,
+          "rows": 204957
+        },
+        "D12_I405_N": {
+          "mean_abs_dv_kmh": 0.17918455822357707,
+          "mean_abs_dq_per_lane": 3.467641750994311,
+          "p99_abs_dv_kmh": 0.7739290237544899,
+          "frac_dq_gt1pct": 0.16529630940238546,
+          "frac_dq_gt5pct": 0.0010563893341104472,
+          "rows": 192164
+        },
+        "D12_I405_S": {
+          "mean_abs_dv_kmh": 0.30427473645624237,
+          "mean_abs_dq_per_lane": 5.32395950284862,
+          "p99_abs_dv_kmh": 2.0137253305399523,
+          "frac_dq_gt1pct": 0.21539621657853578,
+          "frac_dq_gt5pct": 0.003025620019363968,
+          "rows": 107416
+        }
+      },
+      "mean": {
+        "mean_abs_dv_kmh": 0.2858194970064572,
+        "mean_abs_dq_per_lane": 4.157854375979781,
+        "p99_abs_dv_kmh": 1.7202842484312715,
+        "frac_dq_gt1pct": 0.14121627338019888,
+        "frac_dq_gt5pct": 0.0010540784769082936
+      }
+    }
+  },
+  "elapsed_sec": 1582.2,
+  "gbm_source": "work/task1/gbm/state_gbm_<split>.csv - the SHIPPED GBM state predictions; no GBM was refit for the blend",
+  "blend": "state = w * GBM_shipped + (1 - w) * U-Net, w = 0.6, one global weight (no per-panel tuning)",
+  "deploy_note": "Deployed U-Net models are refit on all 273 train days with 60 epochs x 35 steps/epoch (~2100 optimizer steps, the same budget as the evaluated 80 x 27). They are NOT the exact checkpoints behind the holdout table: that table comes from the separate protocol that fits days<213 only and predicts the last 60 days. The refit only adds train data.",
+  "holdout_protocol": "fit on train days < 213, predict the published template rows of days 213-272 from that split's masked view only; GBM side = shipped holdout CSVs matched row-for-row (documented S_state reproduced to +-0.0000); score = t1lib.score (official Task-1 formula); Task-3 proxy = work/task3/local_eval.py + adjust.py imported read-only, projected flux, window 1, jitter 0.06; est_total = 0.35*S_state + 0.15*S_physics",
+  "holdout_single_seed_42": {
+    "gbm": {
+      "S_state": 0.9367,
+      "S_physics": 0.8584,
+      "est_total": 0.4566,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9291,
+          "S_physics": 0.8357,
+          "est_total": 0.4505
+        },
+        "D7_I405_S": {
+          "S_state": 0.9323,
+          "S_physics": 0.8575,
+          "est_total": 0.4549
+        },
+        "D7_I10_E": {
+          "S_state": 0.9391,
+          "S_physics": 0.8522,
+          "est_total": 0.4565
+        },
+        "D12_I5_N": {
+          "S_state": 0.9461,
+          "S_physics": 0.8883,
+          "est_total": 0.4644
+        }
+      }
+    },
+    "unet": {
+      "S_state": 0.9375,
+      "S_physics": 0.8474,
+      "est_total": 0.4552,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9288,
+          "S_physics": 0.8234,
+          "est_total": 0.4486
+        },
+        "D7_I405_S": {
+          "S_state": 0.9341,
+          "S_physics": 0.8486,
+          "est_total": 0.4542
+        },
+        "D7_I10_E": {
+          "S_state": 0.9424,
+          "S_physics": 0.8418,
+          "est_total": 0.4561
+        },
+        "D12_I5_N": {
+          "S_state": 0.9446,
+          "S_physics": 0.8757,
+          "est_total": 0.462
+        }
+      }
+    },
+    "w60": {
+      "S_state": 0.9408,
+      "S_physics": 0.8612,
+      "est_total": 0.4585,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9331,
+          "S_physics": 0.8395,
+          "est_total": 0.4525
+        },
+        "D7_I405_S": {
+          "S_state": 0.9369,
+          "S_physics": 0.8602,
+          "est_total": 0.4569
+        },
+        "D7_I10_E": {
+          "S_state": 0.9436,
+          "S_physics": 0.8544,
+          "est_total": 0.4584
+        },
+        "D12_I5_N": {
+          "S_state": 0.9497,
+          "S_physics": 0.8908,
+          "est_total": 0.466
+        }
+      }
+    },
+    "w70": {
+      "S_state": 0.9403,
+      "S_physics": 0.8615,
+      "est_total": 0.4583,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9326,
+          "S_physics": 0.8397,
+          "est_total": 0.4524
+        },
+        "D7_I405_S": {
+          "S_state": 0.9362,
+          "S_physics": 0.8603,
+          "est_total": 0.4567
+        },
+        "D7_I10_E": {
+          "S_state": 0.9429,
+          "S_physics": 0.8547,
+          "est_total": 0.4582
+        },
+        "D12_I5_N": {
+          "S_state": 0.9493,
+          "S_physics": 0.8912,
+          "est_total": 0.4659
+        }
+      }
+    },
+    "w80": {
+      "S_state": 0.9393,
+      "S_physics": 0.8611,
+      "est_total": 0.4579,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9317,
+          "S_physics": 0.8393,
+          "est_total": 0.452
+        },
+        "D7_I405_S": {
+          "S_state": 0.9352,
+          "S_physics": 0.8599,
+          "est_total": 0.4563
+        },
+        "D7_I10_E": {
+          "S_state": 0.9418,
+          "S_physics": 0.8545,
+          "est_total": 0.4578
+        },
+        "D12_I5_N": {
+          "S_state": 0.9486,
+          "S_physics": 0.8909,
+          "est_total": 0.4656
+        }
+      }
+    },
+    "w90": {
+      "S_state": 0.9381,
+      "S_physics": 0.8602,
+      "est_total": 0.4574,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9305,
+          "S_physics": 0.838,
+          "est_total": 0.4514
+        },
+        "D7_I405_S": {
+          "S_state": 0.9339,
+          "S_physics": 0.859,
+          "est_total": 0.4557
+        },
+        "D7_I10_E": {
+          "S_state": 0.9406,
+          "S_physics": 0.8537,
+          "est_total": 0.4573
+        },
+        "D12_I5_N": {
+          "S_state": 0.9475,
+          "S_physics": 0.89,
+          "est_total": 0.4651
+        }
+      }
+    }
+  },
+  "holdout_seed_averaged": {
+    "gbm": {
+      "S_state": 0.9367,
+      "S_physics": 0.8584,
+      "est_total": 0.4566,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9291,
+          "S_physics": 0.8357,
+          "est_total": 0.4505
+        },
+        "D7_I405_S": {
+          "S_state": 0.9323,
+          "S_physics": 0.8575,
+          "est_total": 0.4549
+        },
+        "D7_I10_E": {
+          "S_state": 0.9391,
+          "S_physics": 0.8522,
+          "est_total": 0.4565
+        },
+        "D12_I5_N": {
+          "S_state": 0.9461,
+          "S_physics": 0.8883,
+          "est_total": 0.4644
+        }
+      }
+    },
+    "unet": {
+      "S_state": 0.9425,
+      "S_physics": 0.8586,
+      "est_total": 0.4587,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9332,
+          "S_physics": 0.8354,
+          "est_total": 0.4519
+        },
+        "D7_I405_S": {
+          "S_state": 0.9395,
+          "S_physics": 0.8582,
+          "est_total": 0.4576
+        },
+        "D7_I10_E": {
+          "S_state": 0.9459,
+          "S_physics": 0.8514,
+          "est_total": 0.4588
+        },
+        "D12_I5_N": {
+          "S_state": 0.9514,
+          "S_physics": 0.8895,
+          "est_total": 0.4664
+        }
+      }
+    },
+    "w50": {
+      "S_state": 0.9431,
+      "S_physics": 0.864,
+      "est_total": 0.4597,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9349,
+          "S_physics": 0.8425,
+          "est_total": 0.4536
+        },
+        "D7_I405_S": {
+          "S_state": 0.9395,
+          "S_physics": 0.8624,
+          "est_total": 0.4582
+        },
+        "D7_I10_E": {
+          "S_state": 0.9456,
+          "S_physics": 0.8569,
+          "est_total": 0.4595
+        },
+        "D12_I5_N": {
+          "S_state": 0.9524,
+          "S_physics": 0.8941,
+          "est_total": 0.4675
+        }
+      }
+    },
+    "w55": {
+      "S_state": 0.9427,
+      "S_physics": 0.8639,
+      "est_total": 0.4595,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9346,
+          "S_physics": 0.8424,
+          "est_total": 0.4535
+        },
+        "D7_I405_S": {
+          "S_state": 0.939,
+          "S_physics": 0.8624,
+          "est_total": 0.458
+        },
+        "D7_I10_E": {
+          "S_state": 0.9452,
+          "S_physics": 0.8569,
+          "est_total": 0.4593
+        },
+        "D12_I5_N": {
+          "S_state": 0.9521,
+          "S_physics": 0.894,
+          "est_total": 0.4673
+        }
+      }
+    },
+    "w60": {
+      "S_state": 0.9423,
+      "S_physics": 0.8637,
+      "est_total": 0.4594,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9343,
+          "S_physics": 0.8422,
+          "est_total": 0.4533
+        },
+        "D7_I405_S": {
+          "S_state": 0.9386,
+          "S_physics": 0.8622,
+          "est_total": 0.4578
+        },
+        "D7_I10_E": {
+          "S_state": 0.9447,
+          "S_physics": 0.8567,
+          "est_total": 0.4592
+        },
+        "D12_I5_N": {
+          "S_state": 0.9517,
+          "S_physics": 0.8938,
+          "est_total": 0.4672
+        }
+      }
+    },
+    "w70": {
+      "S_state": 0.9413,
+      "S_physics": 0.8631,
+      "est_total": 0.4589,
+      "per_panel": {
+        "D7_I210_W": {
+          "S_state": 0.9334,
+          "S_physics": 0.8415,
+          "est_total": 0.4529
+        },
+        "D7_I405_S": {
+          "S_state": 0.9374,
+          "S_physics": 0.8616,
+          "est_total": 0.4573
+        },
+        "D7_I10_E": {
+          "S_state": 0.9436,
+          "S_physics": 0.8562,
+          "est_total": 0.4587
+        },
+        "D12_I5_N": {
+          "S_state": 0.9507,
+          "S_physics": 0.8931,
+          "est_total": 0.4667
+        }
+      }
+    }
+  },
+  "w_edge_check_single_seed": {
+    "note": "S_state mean over the 4 holdout panels, single seed 42",
+    "S_state": {
+      "0.50": 0.9411,
+      "0.55": 0.941,
+      "0.60": 0.9408,
+      "0.65": 0.9406,
+      "0.70": 0.9403,
+      "0.80": 0.9393
+    },
+    "decision": "kept w=0.6: w=0.50/0.55 gain only +0.0003/+0.0002 S_state (~+0.0001/+0.00007 est_total, below the +0.0002 switch rule), and the physics term is flat or slightly better toward 0.7"
+  },
+  "seed_coverage": "D12_I5_N holdout seeds 43/44 were lost to a machine suspend; its holdout evidence is single-seed only",
+  "files": {
+    "primary_w06": [
+      "state_gbm_unet_validation.csv",
+      "state_gbm_unet_private.csv"
+    ],
+    "probe_w05": [
+      "state_gbm_unet_w05_validation.csv",
+      "state_gbm_unet_w05_private.csv"
+    ],
+    "rollback_single_seed_s43": [
+      "state_gbm_unet_validation_s43.csv",
+      "state_gbm_unet_private_s43.csv"
+    ]
+  },
+  "verification": "verify_state.py: template-exact per panel, columns/order identical to state_gbm_<split>.csv, no NaNs",
+  "lb_result": "seed-43 single-seed w=0.6 probe scored 0.83996 vs 0.83734 previous best (+0.00262 S_total)"
+}

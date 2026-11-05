@@ -1,0 +1,15 @@
+﻿import sys, os
+sys.path.insert(0, r"C:\Users\lenovo\Desktop\kaggle\work\task4")
+import pandas as pd, numpy as np, odme
+p="D12_I405_N"; nd=odme.net_dir(p)
+inc=odme.load_incidence(p)
+links=pd.read_csv(os.path.join(nd,"links.csv"),dtype={"link_id":str})
+topo=pd.read_csv(os.path.join(nd,"lwr_mainline_topology.csv"),dtype=str)
+mainl=sorted([l for l in inc.link_id.unique() if l.startswith("L")])
+print("inc mainline", len(mainl))
+print("not in links.csv:", sorted(set(mainl)-set(links.link_id)))
+print("links.csv not in inc:", sorted(set(links.link_id)-set(mainl)))
+print("\ntopo rows", len(topo), "unique mainline_link_id", topo.mainline_link_id.nunique(), "unique link_id", topo.link_id.nunique())
+print(topo[["mainline_link_id","order_index","link_id","from_node","to_node","has_sensor"]].head(8).to_string())
+print("order_index dup?", topo.order_index.duplicated().sum())
+print("\nlinks.csv ids:", links.link_id.tolist()[:12])

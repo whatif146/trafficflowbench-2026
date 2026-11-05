@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code or report, please cite the repository."
+title: "TrafficFlowBench: reproducible traffic state / queue / ODME pipeline"
+authors:
+  - family-names: "CAMPUS SUNNY"
+    name: "CAMPUS SUNNY"
+version: 1.0.0
+date-released: "2026-11-04"
+url: "https://github.com/hsuyooyoo/trafficflowbench-2026"

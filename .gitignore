@@ -1,0 +1,20 @@
+# competition data (download from Kaggle, do not commit)
+kaggle_public/
+data/
+*.parquet
+
+# large artifacts / caches
+work/cache/
+work/submissions/*.csv
+work/submissions/*.zip
+work/submissions/dense*/
+*.pt
+*.npz
+*.pkl
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+env/
