@@ -8,3 +8,4 @@ v7,+empty-window fallback,0.83652
 v8,+weights+fallback,0.83734
 v9,+U-Net state blend,0.83996
 v10,+2-seed U-Net w=0.5,0.84052
+v11,public 0.865 base + our U-Net blend,0.86811

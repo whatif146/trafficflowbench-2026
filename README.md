@@ -9,10 +9,22 @@ resolution over ten directional corridors.
 |---|---|
 | Competition | [2026 IEEE Big Data Cup, Challenge 06, Track 2](https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench) |
 | Team | CAMPUS SUNNY (Kaggle `hsuyooyoo`) |
-| Best public score | **0.84052** (`S_total`), rank 430 / 766 at submission time |
+| Best public score | **0.86811** (`S_total`) with the hybrid submission, rank ~280 / 786; our own end-to-end pipeline scores 0.84052 |
 | Top of public LB | 0.93124 |
 | Deadline / submission | 2026-11-07 |
 | Code, report, predictions | this repository + the **final-package release asset** |
+| Final submission | hybrid repo: [trafficflowbench-2026-hybrid](https://github.com/whatif146/trafficflowbench-2026-hybrid) |
+
+## Final submission (2026-11-07)
+
+The selected primary submission is **0.86811 (ref 58077892)**: the public
+0.86517 pipeline (anubisyy) with our 5-seed U-Net state blend at 60% ours /
+40% public. The backup is **ref 58007101 (0.84052)**, our own end-to-end
+pipeline documented in this repository. The hybrid layer, provenance and
+attribution live in the companion repository
+[trafficflowbench-2026-hybrid](https://github.com/whatif146/trafficflowbench-2026-hybrid)
+(`ATTRIBUTION.md` there). The public notebook author keeps full credit for the
+base Task-1 CatBoost / Task-2 / Task-4 pipeline.
 
 ## Why this repository
 
